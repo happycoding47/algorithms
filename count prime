@@ -1,0 +1,35 @@
+return # of prime numbers up to and include n
+
+def count_prime(n):
+    # 0, 1 is not prime
+    if n < 2:
+        return 0
+    primes = [2]
+
+    # counter x going up to n
+    x = 3
+    while x <= n:
+        for i in range(3, x, 2): 
+        # for i in primes: 
+            if x % i == 0:
+                x += 2
+                break
+        else:
+            primes.append(x)
+            x += 2
+    return len(prime)
+
+
+
+
+## function to check if n is a prime number
+
+def is_prime(n):
+    # 0, 1 is not prime
+    if n < 2:
+        return False
+    for i in range(2, int(n / 2) + 1):
+        if n % i == 0:
+            return False
+    else:
+        return True
